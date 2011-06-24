@@ -18,11 +18,20 @@ function leetPassword(hint){
     mappings['E'] = new Array("3","ii","(=");
     var results = [];
     var upped = hint.toUpperCase();
-    for(var i = 0; i < upped.length; ++i){
-        var c = upped.charAt(i);
+    var repeated = concatIfSmall(upped);
+    for(var i = 0; i < repeated.length; ++i){
+        var c = repeated.charAt(i);
         results.push(mappings[c].randElem());
     }
     return results.join(' ');
+}
+
+function concatIfSmall(value){
+    var res = value;
+    while(res.length < 5){
+        res += value;
+    }
+    return res;
 }
 
 Array.prototype.randElem = function(){
