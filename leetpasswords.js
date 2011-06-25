@@ -15,7 +15,32 @@ function leetPasswords(hint, size){
 function leetPassword(hint){
     var mappings = new Array();
     mappings['A'] = new Array("4","/-\\","@","^","/\\","//-\\\\","/=\\");
+    mappings['B'] = new Array('8', ']3', ']8', '|3', '|8', ']]3', '13');
+    mappings['C'] = new Array('(', '{' , '[', '<', '€');
+    mappings['D'] = new Array(')', '[}', '|)', '|}', '|>', '[>', ']]');
     mappings['E'] = new Array("3","ii","(=");
+    mappings['F'] = new Array('|=', '(=', ']]=', 'ph');
+    mappings['G'] = new Array('6', '9', '(_>', '[[6', '&');
+    mappings['H'] = new Array('#', '|-|', '(-)', ')-(', '}{', '}-{', '{-}', '/-/', '\\-\\', '|~|', '[]-[]', ']]-[[', '+');
+    mappings['I'] = new Array('1', '!', '|', '][', '[]');  
+    mappings['J'] = new Array('_|', 'u|', ';_[]', ';_[[');
+    mappings['K'] = new Array('|<', '|{', '][<', ']]<', '[]<');
+    mappings['L'] = new Array('|', '1', '|_', '[]_', '][_', '\xa3');
+    mappings['M'] = new Array('/\\/\\', '|\\/|', '[\\/]', '(\\/)', '/V\\', '[]V[]', '\\\\\\', '(T)', '^^', '.\\\\', '//.', '][\\\\//][', 'JVL');
+    mappings['N'] = new Array('/\\/', '|\\|', '(\\)', '/|/', '[\\]', '{\\}', '][\\][', '[]\\[]', '~');
+    mappings['O'] = new Array('0', '()', '[]', '<>', '*', '[[]]');
+    mappings['P'] = new Array('|D', '|*', '|>', '[]D', '][D');
+    mappings['Q'] = new Array('(,)' , '0,' , 'O,' , 'O\\', '[]\\');
+    mappings['R'] = new Array('|2', '|?', '|-', ']]2 []2 ][2');
+    mappings['S'] = new Array('5', '$', '\x9a');
+    mappings['T'] = new Array('7', '+', "']'", '7`', '~|~', '-|-', "']['", '"|"', '\x86');
+    mappings['U'] = new Array('(_)', '|_|', '\\_\\', '/_/', '\\_/', '[]_[]', ']_[', '\xb5');
+    mappings['V'] = new Array('\\/', '\\\\//', 'v');
+    mappings['W'] = new Array('\\/\\/', '|/\\|', '[/\\]', '(/\\)', 'VV', '///', '\\^/', '\\\\/\\//', '1/\\/', '\\/1/', '1/1/');
+    mappings['X'] = new Array('><', '}{', ')(', '}[');
+    mappings['Y'] = new Array("'/", '%', '`/', '\\j', '``//', '\xa5', 'j', '\\|/', '-/');
+    mappings['Z'] = new Array('2', 'z', '7_', '`/_');  
+
     var results = [];
     var upped = hint.toUpperCase();
     var repeated = concatIfSmall(upped);
